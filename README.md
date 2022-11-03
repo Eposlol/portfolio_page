@@ -1,3 +1,3 @@
-# Frontend programist portfolio page
+# Frontend programmer portfolio page
 
 
