@@ -7,63 +7,78 @@ import tverskieProstory from '../assets/portfolio/tverskie_prostory.png'
 import taktTver from '../assets/portfolio/takttver.png'
 import tverichata from '../assets/portfolio/tverichata.png'
 import trKom from '../assets/portfolio/tr-kom.png'
+import weatherPic from '../assets/portfolio/weather_app.png'
 
 const Portfolio = () => {
 
     const portfolios = [
         {
             id: 1,
-            src: artisan12
+            src: weatherPic,
+            demo: "https://bespoke-bublanina-e6b944.netlify.app/",
+            code: "https://github.com/Eposlol/openweather-app"
         },
         {
             id: 2,
-            src: artisan30
+            src: artisan30,
+            demo: 'https://30kv.artisanhouse.ru/'
         },
         {
             id: 3,
-            src: tverTrud
+            src: tverTrud,
+            demo: 'https://www.tvertrud.ru/'
         },
         {
             id: 4,
-            src: tverStroyka
+            src: tverStroyka,
+            demo: 'https://tverstroyka.ru/'
         },
         {
             id: 5,
-            src: tverskieProstory
+            src: tverskieProstory,
+            demo: 'http://vv.bk-hosting.ru/'
         },
         {
             id: 6,
-            src: taktTver
+            src: taktTver,
+            demo: 'https://taktver.ru/'
         },
         {
             id: 7,
-            src: tverichata
+            src: tverichata,
+            demo: 'https://tverichata.ru/'
         },
         {
             id: 8,
-            src: trKom
+            src: trKom,
+            demo: 'https://tr-kom.ru./'
+        },
+        {
+            id: 9,
+            src: artisan12,
+            demo: 'https://12kv.artisanhouse.ru/'
         },
     ]
 
   return (
-    <div name='portfolio' className='bg-gradient-to-b from-black to-gray-800 w-full text-white  md:h-[100%]'>
+    <div name='portfolio' className='bg-gradient-to-b from-black to-gray-800 w-full md:h-screen h-full text-white'>
         <div className='max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full'>
             <div className='pb-8'>
                 <p className='text-4xl font-bold inline border-b-4 border-gray-500'>Portfolio</p>
                 <p className='py-6'>Check out some of my work here</p>
             </div>
-            <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0'>
+            <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-8 md:px-12 px-3 sm:px-0'>
                 {
-                    portfolios.map(({id, src})=> (
+                    portfolios.map(({id, src, demo, code})=> (
 
                         <div key={id} className='shadow-md shadow-gray-600 rounded-lg '>
                             <div 
-                            className='rounded-md duration-200 hover:scale-105 object-cover h-[190px] w-auto bg-cover bg-no-repeat'
+                            className='rounded-md duration-200 hover:scale-105 object-cover h-[190px] w-auto bg-cover bg-no-repeat cursor-pointer'
                             style={{backgroundImage: `url(${src})`}}
                             ></div>
                             <div className='flex items-center justify-center'>
-                                <button className='w-1/2 px-6 py3 m-4 duration-200 hover:scale-105'>Demo</button>
-                                <button className='w-1/2 px-6 py3 m-4 duration-200 hover:scale-105'>Code</button>
+                               {demo && <a href={demo} target='_blank' rel="noreferrer" className='w-1/2 px-6 py3 m-4 duration-200 hover:scale-105 flex items-center justify-center'>Demo</a>} 
+                               {code && <a href={code} target='_blank' rel="noreferrer" className='w-1/2 px-6 py3 m-4 duration-200 hover:scale-105 flex items-center justify-center'>Code</a>} 
                             </div>
                     </div>
 

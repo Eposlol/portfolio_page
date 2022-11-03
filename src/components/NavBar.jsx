@@ -48,7 +48,7 @@ const NavBar = () => {
         </div>
         
           { nav && (
-            <ul className='flex flex-col justify-center absolute top-0 w-screen h-screen items-center bg-gradient-to-b from-black to-gray-800 text-gray-500'>
+            <ul className='flex flex-col justify-center absolute top-0 w-screen h-screen items-center bg-gradient-to-b from-black to-gray-800 text-gray-500 left-0'>
                { links.map(({id,link}) => (
                     <li key={id} className='px-4 cursor-pointer capitalize py-6 text-4xl'>
                      <Link onClick={() => setNav(!nav)} to={link} smooth duration={500}>{link}</Link>

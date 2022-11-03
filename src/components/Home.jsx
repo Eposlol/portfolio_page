@@ -5,9 +5,9 @@ import {Link} from 'react-scroll'
 
 function Home() {
   return (
-    <div name="home" className='h-screen w-full bg-gradient-to-b from-black to-gray-800'>
+    <div name="home" className='md:h-screen h-full w-full bg-gradient-to-b from-black to-gray-800'>
         <div className='max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row'>
-            <div className='flex flex-col justify-center h-full mt-5'>
+            <div className='flex flex-col justify-center h-full mt-20 md:mt-0'>
                 <h2 className='tex-4xl sm:text-7xl font-bold text-white'>
                     I'm Frontend Developer
                 </h2>
@@ -21,7 +21,7 @@ function Home() {
                     Portfolio <span className='group-hover:rotate-90 duration-300'><MdOutlineKeyboardArrowRight className='ml-1' size={25}/></span>
                 </Link>
             </div>
-            <div className='flex md:justify-center md:items-center'>
+            <div className='flex md:justify-center md:items-center md:my-0 my-3'>
                 <img className='rounded-2xl mx-auto w-2/3 md:w-full' src={HeroImage} alt="my profile"/>
             </div>
         </div>
