@@ -15,7 +15,7 @@ const Portfolio = () => {
         {
             id: 1,
             src: weatherPic,
-            demo: "https://bespoke-bublanina-e6b944.netlify.app/",
+            demo: "https://sinotov-weather-app.netlify.app",
             code: "https://github.com/Eposlol/openweather-app"
         },
         {
