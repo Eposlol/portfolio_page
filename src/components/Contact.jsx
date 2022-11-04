@@ -23,7 +23,7 @@ const Contact = () => {
                     <textarea 
                     placeholder='Enter your message'
                     name="message" 
-                    rows="10"
+                    rows="8"
                     className='p-2 bg-transparent border-2 text-white focus:outline-none rounded-md'
                     ></textarea>
                     <button 

@@ -17,12 +17,12 @@ function Home() {
                     technologies like
                     React, Tailwind, JS, SASS, 
                 </p>
-                <Link to='portfolio' smooth duration={500} className=' group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer'>
+                <Link to='portfolio' smooth duration={500} className='group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer'>
                     Portfolio <span className='group-hover:rotate-90 duration-300'><MdOutlineKeyboardArrowRight className='ml-1' size={25}/></span>
                 </Link>
             </div>
-            <div className='flex md:justify-center md:items-center md:my-0 my-3'>
-                <img className='rounded-2xl mx-auto w-2/3 md:w-full' src={HeroImage} alt="my profile"/>
+            <div className='flex md:justify-center md:items-center md:my-0 my-3 '>
+                <img className='rounded-2xl mx-auto md:w-full' src={HeroImage} alt="my profile"/>
             </div>
         </div>
     </div>

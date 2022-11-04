@@ -15,7 +15,7 @@ const Portfolio = () => {
         {
             id: 1,
             src: weatherPic,
-            demo: "https://sinotov-weather-app.netlify.app/",
+            demo: "https://bespoke-bublanina-e6b944.netlify.app/",
             code: "https://github.com/Eposlol/openweather-app"
         },
         {
@@ -71,14 +71,14 @@ const Portfolio = () => {
                 {
                     portfolios.map(({id, src, demo, code})=> (
 
-                        <div key={id} className='shadow-md shadow-gray-600 rounded-lg '>
+                        <div key={id} className='group hover:scale-105 shadow-md shadow-gray-600 rounded-lg duration-200'>
                             <div 
-                            className='rounded-md duration-200 hover:scale-105 object-cover h-[190px] w-auto bg-cover bg-no-repeat cursor-pointer'
+                            className='rounded-t-md   object-cover h-[190px] w-auto bg-cover bg-no-repeat cursor-pointer'
                             style={{backgroundImage: `url(${src})`}}
                             ></div>
                             <div className='flex items-center justify-center'>
-                               {demo && <a href={demo} target='_blank' rel="noreferrer" className='w-1/2 px-6 py3 m-4 duration-200 hover:scale-105 flex items-center justify-center'>Demo</a>} 
-                               {code && <a href={code} target='_blank' rel="noreferrer" className='w-1/2 px-6 py3 m-4 duration-200 hover:scale-105 flex items-center justify-center'>Code</a>} 
+                               {demo && <a href={demo} target='_blank' rel="noreferrer" className={` px-6 py-3 flex items-center justify-center hover:bg-gradient-to-r from-cyan-500 to-blue-500 duration-300 ${code? 'rounded-bl-lg w-1/2' : 'w-full rounded-b-lg'} `}>Demo</a>} 
+                               {code && <a href={code} target='_blank' rel="noreferrer" className='w-1/2 px-6 py-3 flex items-center justify-center border-l-2 border-gray-500 hover:bg-gradient-to-r from-cyan-500 to-blue-500 duration-300 rounded-br-lg'>Code</a>} 
                             </div>
                     </div>
 
