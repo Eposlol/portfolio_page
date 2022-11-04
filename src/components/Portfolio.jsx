@@ -15,7 +15,7 @@ const Portfolio = () => {
         {
             id: 1,
             src: weatherPic,
-            demo: "https://sinotov-weather-app.netlify.app/",
+            demo: "https://bespoke-bublanina-e6b944.netlify.app/",
             code: "https://github.com/Eposlol/openweather-app"
         },
         {
@@ -61,7 +61,7 @@ const Portfolio = () => {
     ]
 
   return (
-    <div name='portfolio' className='bg-gradient-to-b from-black to-gray-800 w-full md:h-screen h-full text-white'>
+    <div name='portfolio' className='pt-20 md:pt-0 bg-gradient-to-b from-black to-gray-800 w-full md:h-screen h-full text-white'>
         <div className='max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full'>
             <div className='pb-8'>
                 <p className='text-4xl font-bold inline border-b-4 border-gray-500'>Portfolio</p>

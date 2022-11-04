@@ -2,7 +2,7 @@ import React from 'react'
 
 const Contact = () => {
   return (
-    <div name='contact' className='w-full h-full md:h-screen bg-gradient-to-b from-black to-gray-800 text-white'>
+    <div name='contact' className='w-full h-full pt-20 md:pt-0 md:h-screen bg-gradient-to-b from-black to-gray-800 text-white'>
         <div className='flex flex-col justify-center p-4 mx-auto h-full max-w-screen-lg'>
             <div className='pb-8'>
                 <p className='text-4xl font-bold inline border-b-4 border-gray-500'>Contact</p>
@@ -27,7 +27,7 @@ const Contact = () => {
                     className='p-2 bg-transparent border-2 text-white focus:outline-none rounded-md'
                     ></textarea>
                     <button 
-                    className='w-40 text-white bg-gradient-to-b from-cyan-500 to-blue-500 px-6 py-3 my-8 flex items-center justify-center rounded-md hover:scale-105 duration-300'>Let's talk</button>
+                    className='w-40 text-white bg-gradient-to-b from-cyan-500 to-blue-500 px-6 py-3 my-8 mx-auto flex items-center justify-center rounded-md hover:scale-105 duration-300'>Let's talk</button>
                 </form>
 
                 
