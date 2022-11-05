@@ -40,7 +40,7 @@ const SocialLinks = () => {
   ]
    
   return (
-    <div className='flex w-full lg:w-auto items-center justify-center lg:flex-col lg:top-[35%] lg:left-0 lg:fixed bg-gradient-to-b from-black to-gray-800'>
+    <div className='flex w-full lg:w-auto items-center justify-center lg:flex-col lg:top-[35%] lg:left-0 lg:fixed bg-gradient-to-b from-black to-gray-800 lg:bg-none'>
       <ul className='flex flex-row lg:flex-col'>
         {links.map(({id, child, href, style, download}) => (
           <li 
