@@ -1,9 +1,11 @@
+import SocialLinks from "./SocialLinks"
 
 const Contact = () => {
    
 
   return (
-    <div name='contact' className='w-full h-full pt-20 md:pt-0 md:h-screen bg-gradient-to-b from-black to-gray-800 text-white'>
+   
+    <div name='contact' className='w-full min-h-screen h-full pt-20 md:pt-0 md:h-screen bg-gradient-to-b from-black to-gray-800 text-white flex flex-col justify-between md:block'>
         <div className='flex flex-col justify-center p-4 mx-auto h-full max-w-screen-lg'>
             <div className='pb-8'>
                 <p className='text-4xl font-bold inline border-b-4 border-gray-500'>Contact</p>
@@ -36,7 +38,10 @@ const Contact = () => {
                 </form>
             </div>
         </div>
+        <SocialLinks/>
     </div>
+
+   
   )
 }
 
