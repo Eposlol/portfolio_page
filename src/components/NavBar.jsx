@@ -1,31 +1,46 @@
 import React, { useState } from 'react'
 import {FaBars, FaTimes} from "react-icons/fa"
 import {Link} from 'react-scroll'
+import { useTranslation } from "react-i18next";
+import useLocalStorage from "./hooks/use-localStorage";
+import i18n from '../i18n';
 
 const NavBar = () => {
 
     const [nav, setNav] = useState(false)
+    const { t } = useTranslation()
+    const [language, setLanguage] = useLocalStorage('language', 'en');
+
+    const handleLenguageChange = () => {
+        if (language === 'en') {
+            i18n.changeLanguage('ru');
+            setLanguage('ru');
+        } else if (language === 'ru') {
+            i18n.changeLanguage('en');
+            setLanguage('en');
+        }
+    };
 
     const links = [
         {
             id: 1,
-            link: 'home'
+            link: t('home')
         },
         {
             id: 2,
-            link: 'about'
+            link: t('about')
         },
         {
             id: 3,
-            link: 'portfolio'
+            link: t('portfolio')
         },
         {
             id: 4,
-            link: 'experience'
+            link: t('experience')
         },
         {
             id: 5,
-            link: 'contact'
+            link: t('contact')
         },
     ]
         
@@ -42,6 +57,10 @@ const NavBar = () => {
                         </li>
                 ))
             }
+              <div>
+     
+     <button className='px-4 cursor-pointer font-medium text-gray-500 hover:scale-105 hover:text-white duration-200' onClick={handleLenguageChange}> {language === 'ru' ? t('En') : t('Ru')}</button>
+    </div>
         </ul>
         <div onClick={() => setNav(!nav)} className='cursor-pointer pr-4 z-10 text-gray-500 md:hidden'>
         {nav? <FaTimes size={30}/>: <FaBars size={30}/>}
@@ -54,6 +73,7 @@ const NavBar = () => {
                      <Link onClick={() => setNav(!nav)} to={link} smooth duration={500}>{link}</Link>
                         </li>
                 ))}
+                  <button className='px-4 cursor-pointer capitalize py-6 text-4xl' onClick={handleLenguageChange}> {language === 'ru' ? t('En') : t('Ru')}</button>
             </ul>
             )}
     </div>
