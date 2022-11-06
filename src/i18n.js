@@ -19,7 +19,7 @@ i18n
 .init({
     resources,
     lng:JSON.parse(localStorage.getItem('language')),
-    fallbackLng:'ru'
+    fallbackLng:'en'
 })
 
 export default i18n;
