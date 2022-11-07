@@ -11,7 +11,7 @@ import weatherPic from '../assets/portfolio/weather_app.png'
 import { useTranslation } from 'react-i18next'
 
 const Portfolio = () => {
-    const { t} = useTranslation()
+    const {t} = useTranslation()
     const portfolios = [
         {
             id: 1,
@@ -72,7 +72,7 @@ const Portfolio = () => {
                 {
                     portfolios.map(({id, src, demo, code})=> (
 
-                        <div key={id} className='group hover:scale-105 shadow-md shadow-gray-600 rounded-lg duration-200'>
+                        <div key={id} className='group hover:-translate-y-2 shadow-md shadow-gray-600 rounded-lg duration-500'>
                             <div 
                             className='rounded-t-md   object-cover h-[190px] w-auto bg-cover bg-no-repeat cursor-pointer'
                             style={{backgroundImage: `url(${src})`}}
