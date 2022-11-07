@@ -9,8 +9,8 @@ const resources = {
     en: {
         translation: en,
     },
-    ru:{
-        translation:ru,
+    ru: {
+        translation: ru,
     }
 }
 
